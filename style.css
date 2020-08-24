@@ -1,0 +1,33 @@
+.wrapperOne {
+    float: left;
+    flex-direction: row;
+}
+
+.wrapperTwo {
+    text-indent: 10px;
+    background-color: slategrey;
+    padding-left: 20px;
+}
+
+.wrapperThree {
+    flex-direction: row;
+    display: flex;
+}
+
+.flexbox-items {
+    text-align: center;
+    color: black;
+    font-size: larger;
+}
+
+.container {
+    display: flex;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.wrapperOne, .wrapperTwo, .wrapperThree, .flexbox-items, h3{
+    font-family: fantasy;
+}
