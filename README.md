@@ -1,5 +1,11 @@
 https://mattmoe1.github.io/Weather-Dashboard/
 
+<img src= "images/open%20weather.png" width="800">
+<img src= "images/weather%20dash.png" width="800">
+
+Weather Dashboard when opened will show you a five day forecast of a location you search for, it will show you UV, Temp, Humidity, and Wind Speed. To start the application just simply type a location in the search field and it will pull up the information.
+
+
 
 # 06 Server-Side APIs: Weather Dashboard
 

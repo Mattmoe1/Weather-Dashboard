@@ -71,7 +71,7 @@ function formatDate() {
     return today 
 }
 
-// function to get UV index
+// function to get UV
 function getUvIndex(lat, long) {
     console.log(lat, long)
     $.ajax({
@@ -89,6 +89,22 @@ function getUvIndex(lat, long) {
 
     })
 }
+// color for UV index
+function uvIndexBack(uvNum) {
+    let uv = $("#uv");
+    console.log("uv", uvNum);
+    if (uvNum >= 0 && uvNum < 3) {
+        uv.css("background", "green");
+    } else if (uvNum >= 3 && uvNum <= 5) {
+        uv.css("background", "yellow");
+      } else if (uvNum > 5 && uvNum <= 7) {
+        uv.css("background", "darkorange");
+      } else if (uvNum > 7 && uvNum <= 10) {
+        uv.css("background", "orangered");
+      } else if (uvNum > 10) {
+        uv.css("background", "red");
+      }
+    }
 // function to return 5 day forecast
 function fiveDay(searchText) {
     $.ajax({
@@ -124,7 +140,7 @@ function fiveDay(searchText) {
     })
 
 }
-// logs searches in local storage
+// adds the searches in local storage
 function saveSearch(city) {
     let searchedCities = localStorage.getItem("weatherApp");
     if (!searchedCities) {
@@ -137,7 +153,7 @@ function saveSearch(city) {
     populateSearch(searchedCities);
 }
 
-// function to display search history below search bar
+// function to display search history below the search bar
 function populateSearch(cities) {
     $("#searchHistory").empty()
     for (let i = 0; i < cities.length; i++) {
